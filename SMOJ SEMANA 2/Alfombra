@@ -1,0 +1,38 @@
+import math
+
+# Entrada de datos
+A = int(input())
+L = int(input())
+material = input().strip()
+
+# Determinar factor según material
+if material == "Algodon":
+    factor = 5
+elif material == "Bambu":
+    factor = 4
+elif material == "Nylon":
+    factor = 3
+
+# Dimensiones de la habitación
+ancho = min(A, L)
+largo = max(A, L)
+
+# La alfombra es un anillo circular que toca los bordes en el lado más corto
+radio_exterior = ancho / 2
+radio_interior = radio_exterior / factor
+
+# Áreas importantes
+area_total = A * L
+area_circulo_exterior = math.pi * radio_exterior**2
+area_circulo_interior = math.pi * radio_interior**2
+area_alfombra = area_circulo_exterior - area_circulo_interior
+
+# Porcentaje sin cubrir (considerando que solo el círculo exterior cubre área)
+# El área sin cubrir es el área total menos el área del círculo exterior
+# más el área del círculo interior (que tampoco está cubierta)
+area_sin_cubrir = area_total - area_circulo_exterior + area_circulo_interior
+porcentaje_sin_cubrir = (area_sin_cubrir / area_total) * 100
+
+# Redondear y mostrar resultados
+print(f"{area_alfombra:.2f}")
+print(f"{porcentaje_sin_cubrir:.2f} %")

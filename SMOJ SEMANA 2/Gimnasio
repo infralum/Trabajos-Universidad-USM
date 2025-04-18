@@ -1,0 +1,29 @@
+ejercicio =input()
+genero =input()
+minutos =int(input())
+
+#situaciones en caso de ser hombre o mujer
+
+if genero == "Hombre":
+    if ejercicio == "Correr":
+        ejercicio = 30
+        
+    elif ejercicio == "Bici":
+        ejercicio = 25
+        
+    else:
+        ejercicio = 37
+        
+# en caso de la mujer
+else:
+    if ejercicio == "Correr":
+        ejercicio = 32
+        
+    elif ejercicio == "Bici":
+        ejercicio = 22
+        
+    else:
+        ejercicio = 30
+
+calorias = ejercicio * minutos
+print(calorias)

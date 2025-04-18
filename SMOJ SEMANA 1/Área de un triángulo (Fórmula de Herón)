@@ -1,0 +1,7 @@
+import math
+n1 = float(input())
+n2 = float(input())
+n3 = float(input())
+area = float((n1+n2+n3)/2)
+heros = round(math.sqrt(area*(area-n1)*(area-n2)*(area-n3)), 2)
+print(heros)

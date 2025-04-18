@@ -1,0 +1,28 @@
+nubesdia =int(input())
+nubesnoche = int(input())
+hormigas =str(input())
+perro = str(input())
+if perro == "si":
+    ojo = str(input())
+
+
+diaslluvia =int(input())
+
+
+#las 3 condiciones
+if nubesdia >= 3 and nubesnoche > nubesdia and hormigas == "si" and perro == "si" and ojo == "izquierdo":
+    print("Maniana se puede salir a jugar")
+
+
+
+#todas las demas opciones 
+
+
+elif nubesdia >= 3 and nubesnoche > nubesdia or hormigas == "si" or perro == "si" and ojo == "izquierdo":
+    
+    if diaslluvia >= 4:
+        print("Maniana se puede salir a jugar")
+    else:
+        print("Maniana llueve")
+else:
+    print("Maniana se puede salir a jugar")

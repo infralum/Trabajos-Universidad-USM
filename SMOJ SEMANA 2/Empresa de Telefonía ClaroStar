@@ -1,0 +1,36 @@
+# Entrada de datos
+minutos_dia = int(input())
+minutos_noche = int(input())
+
+# Constantes para mejor mantenibilidad
+LIMITE_DIA = 100
+PRECIO_DIA_NORMAL = 10
+PRECIO_DIA_EXCESO = 15
+
+LIMITE_NOCHE = 80
+PRECIO_NOCHE_NORMAL = 7
+PRECIO_NOCHE_EXCESO = 13
+
+# Cálculo para horario DIA
+if minutos_dia > LIMITE_DIA:
+    exceso_dia = minutos_dia - LIMITE_DIA
+    print(f"DIA: excede en {exceso_dia} minutos")
+    costo_dia = LIMITE_DIA * PRECIO_DIA_NORMAL + exceso_dia * PRECIO_DIA_EXCESO
+else:
+    print("DIA: no excede")
+    costo_dia = minutos_dia * PRECIO_DIA_NORMAL
+
+# Cálculo para horario NOCHE
+if minutos_noche > LIMITE_NOCHE:
+    exceso_noche = minutos_noche - LIMITE_NOCHE
+    print(f"NOCHE: excede en {exceso_noche} minutos")
+    costo_noche = LIMITE_NOCHE * PRECIO_NOCHE_NORMAL + exceso_noche * PRECIO_NOCHE_EXCESO
+else:
+    print("NOCHE: no excede")
+    costo_noche = minutos_noche * PRECIO_NOCHE_NORMAL
+
+# Cálculo del total
+total_pagar = costo_dia + costo_noche
+
+# Salida final
+print(f"Cliente paga {total_pagar}")

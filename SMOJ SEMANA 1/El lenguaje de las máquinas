@@ -1,0 +1,3 @@
+binario = input()
+decimal = int(binario, 2)
+print(decimal)

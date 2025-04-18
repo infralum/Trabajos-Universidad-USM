@@ -1,0 +1,37 @@
+a = float(input())
+b = float(input())
+c = float(input())
+
+if a + b > c and a + c > b and b + c > a:
+    # Clasificación por lados
+    if a == b == c:
+        print("Triangulo equilatero")
+    elif a != b and b != c and c != a:
+
+#teorema de pitagoras
+        if a > b and a > c:
+            es_rectangulo = (b**2 + c**2 == a**2)
+        elif b > a and b > c:
+            es_rectangulo = (a**2 + c**2 == b**2)
+        else:
+            es_rectangulo = (a**2 + b**2 == c**2)
+        
+        if es_rectangulo:
+            print("Triangulo escaleno rectangulo")
+#si no cumple con las funciones elevado a dos es escaleno
+        else:
+            print("Triangulo escaleno")
+    #isoceles al cuadrado y solo isoceles
+    elif a==b or b==c or a==c:
+        if a==b:
+            is_recta = (a**2 + b**2 == c**2)
+        elif b==c:
+            is_recta = (b**2 + c**2 == a**2)
+        else:
+            is_recta = (c**2 + a**2 == b**2)
+        if is_recta:
+            print("Triangulo isosceles rectangulo")
+        else:
+            print("Triangulo isosceles")
+else:
+    print("No es triangulo")

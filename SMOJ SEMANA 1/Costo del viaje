@@ -1,0 +1,29 @@
+#Entrada
+
+#Tres números positivos, con o sin decimales, que representan la distancia en Kms que se recorrerá, el rendimiento del auto en Kms/litro, y el costo de cada litro de combustible, en ese orden. No escriba ningún mensaje antes de leer los datos.
+#Salida
+
+#Un único número redondeado a 2 decimales, correspondiente al costo total del viaje caracterizado por las entradas. En la salida, no escriba mensajes ni nada adicional a lo indicado.
+#Observaciones
+
+#Puede suponer que las entradas serán siempre correctas, es decir, números positivos en rangos razonables.
+#Ejemplo
+#Entrada
+
+#200.0
+#10.0
+#800.0
+
+#Salida
+
+#16000.0
+
+#En el ejemplo: Un viaje de 200 Kms, en un auto que rinde 10 Kms/litro, cuando el combustible cuesta 800800 por litro, resulta en un costo total de 16000.016000.0.
+
+
+
+n1 = float(input())
+n2 = float(input())
+n3 = float(input())
+redondeado = round((n1/n2)*n3, 2)
+print (redondeado)
